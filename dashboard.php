@@ -45,8 +45,11 @@ function setRupiah($price)
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
 </head>
 
 <body>
@@ -88,7 +91,8 @@ function setRupiah($price)
         <!-- NAV -->
 
         <!-- --------------------MAIN START ------------------------ -->
-        <main>
+        
+        <main style="background-color: #f1f0f6">
             <h1 class="title">Dashboard</h1>
             <ul class="breadcrumbs">
                 <li><a href="#">Home</a></li>
@@ -149,7 +153,7 @@ function setRupiah($price)
 
                 </div>
                 <div class="table-section">
-                    <table>
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -171,11 +175,11 @@ function setRupiah($price)
                                     <td><?php echo $row['product_quantity'] ?></td>
                                     <td><?php echo setRupiah(($row ['product_price'] * $kurs_dollar ))?></td>
                                     <td>
-                                        <a href="editProduct.php?id_product=<?php echo $row['id_product']; ?>" role="button" onclick="return confirm ('Are you sure want to edit this data?')">
-                                            <i class="uil uil-edit edit"></i>
+                                        <a class="bx bx-edit" href="editProduct.php?id_product=<?php echo $row['id_product']; ?>" role="button" onclick="return confirm ('Are you sure want to edit this data?')">
+                                        
                                         </a>
-                                        <a href="deleteAction.php?id_product=<?php echo $row['id_product']; ?>" role="button" onclick="return confirm('Are you sure want to delete this data?')">
-                                            <i class="uil uil-trash-alt delete"></i>
+                                        <a class="bx bx-trash" href="deleteAction.php?id_product=<?php echo $row['id_product']; ?>" role="button" onclick="return confirm('Are you sure want to delete this data?')">
+                                        
                                         </a>
                                     </td>
                                 </tr>
