@@ -67,7 +67,7 @@
             </ul>
             <div class="container">
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                <form action="editActionPofile.php" method="POST">
+                <form action="editActionProfile.php" method="POST">
                     <h2>Edit Profile</h2>
                     <div class="content">
                         <div class="input-fields">
